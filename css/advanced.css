@@ -1,0 +1,605 @@
+@charset "UTF-8";
+/*------------------------------------------------------------
+hover・・・ボタンホバー効果
+-------------------------------------------------------------*/
+.btn:hover {
+  opacity: 0.7;
+}
+/*------------------------------------------------------------
+clear・・・クリアフィックス解除
+-------------------------------------------------------------*/
+.clearfix {
+  clear: both;
+}
+/*------------------------------------------------------------
+align・・・文字の横位置
+-------------------------------------------------------------*/
+.al-c {
+  text-align: center;
+} /*中央寄せ*/
+.al-r {
+  text-align: right;
+} /*右寄せ*/
+.al-l {
+  text-align: left;
+} /*左寄せ*/
+/*------------------------------------------------------------
+margin・・・周りのブロックからの距離
+-------------------------------------------------------------*/
+
+.m0 {
+  margin: 0 !important;
+} /*周りからのmarginを0に*/
+.m0-t {
+  margin-top: 0 !important;
+} /*上からのmarginを0に*/
+.m0-r {
+  margin-right: 0 !important;
+} /*右からのmarginを0に*/
+.m0-b {
+  margin-bottom: 0 !important;
+} /*下からのmarginを0に*/
+.m0-l {
+  margin-left: 0 !important;
+} /*左からのmarginを0に*/
+.m5 {
+  margin: 5px !important;
+}
+.m5-t {
+  margin-top: 5px !important;
+}
+.m5-r {
+  margin-right: 5px !important;
+}
+.m5-b {
+  margin-bottom: 5px !important;
+}
+.m5-l {
+  margin-left: 5px !important;
+}
+.m10 {
+  margin: 10px !important;
+}
+.m10-t {
+  margin-top: 10px !important;
+}
+.m10-r {
+  margin-right: 10px !important;
+}
+.m10-b {
+  margin-bottom: 10px !important;
+}
+.m10-l {
+  margin-left: 10px !important;
+}
+.m15 {
+  margin: 15px !important;
+}
+.m15-t {
+  margin-top: 15px !important;
+}
+.m15-r {
+  margin-right: 15px !important;
+}
+.m15-b {
+  margin-bottom: 15px !important;
+}
+.m15-l {
+  margin-left: 15px !important;
+}
+.m20 {
+  margin: 20px !important;
+}
+.m20-t {
+  margin-top: 20px !important;
+}
+.m20-r {
+  margin-right: 20px !important;
+}
+.m20-b {
+  margin-bottom: 20px !important;
+}
+.m20-l {
+  margin-left: 20px !important;
+}
+.m25 {
+  margin: 25px !important;
+}
+.m25-t {
+  margin-top: 25px !important;
+}
+.m25-r {
+  margin-right: 25px !important;
+}
+.m25-b {
+  margin-bottom: 25px !important;
+}
+.m25-l {
+  margin-left: 25px !important;
+}
+.m30 {
+  margin: 30px !important;
+}
+.m30-t {
+  margin-top: 30px !important;
+}
+.m30-r {
+  margin-right: 30px !important;
+}
+.m30-b {
+  margin-bottom: 30px !important;
+}
+.m30-l {
+  margin-left: 30px !important;
+}
+.m40 {
+  margin: 40px !important;
+}
+.m40-t {
+  margin-top: 40px !important;
+}
+.m40-r {
+  margin-right: 40px !important;
+}
+.m40-b {
+  margin-bottom: 40px !important;
+}
+.m40-l {
+  margin-left: 40px !important;
+}
+.m50 {
+  margin: 50px !important;
+}
+.m50-t {
+  margin-top: 50px !important;
+}
+.m50-r {
+  margin-right: 50px !important;
+}
+.m50-b {
+  margin-bottom: 50px !important;
+}
+.m50-l {
+  margin-left: 50px !important;
+}
+.m60 {
+  margin: 60px !important;
+}
+.m60-t {
+  margin-top: 60px !important;
+}
+.m60-r {
+  margin-right: 60px !important;
+}
+.m60-b {
+  margin-bottom: 60px !important;
+}
+.m60-l {
+  margin-left: 60px !important;
+}
+.m70 {
+  margin: 70px !important;
+}
+.m70-t {
+  margin-top: 70px !important;
+}
+.m70-r {
+  margin-right: 70px !important;
+}
+.m70-b {
+  margin-bottom: 70px !important;
+}
+.m70-l {
+  margin-left: 70px !important;
+}
+.m80 {
+  margin: 80px !important;
+}
+.m80-t {
+  margin-top: 80px !important;
+}
+.m80-r {
+  margin-right: 80px !important;
+}
+.m80-b {
+  margin-bottom: 80px !important;
+}
+.m80-l {
+  margin-left: 80px !important;
+}
+.m90 {
+  margin: 90px !important;
+}
+.m90-t {
+  margin-top: 90px !important;
+}
+.m90-r {
+  margin-right: 90px !important;
+}
+.m90-b {
+  margin-bottom: 90px !important;
+}
+.m90-l {
+  margin-left: 90px !important;
+}
+.m100 {
+  margin: 100px !important;
+}
+.m100-t {
+  margin-top: 100px !important;
+}
+.m100-r {
+  margin-right: 100px !important;
+}
+.m100-b {
+  margin-bottom: 100px !important;
+}
+.m100-l {
+  margin-left: 100px !important;
+}
+/*------------------------------------------------------------
+5、padding・・・周りのブロックからの距離（padding）
+-------------------------------------------------------------*/
+
+.p0 {
+  padding: 0 !important;
+}
+.p0-t {
+  padding-top: 0 !important;
+}
+.p0-r {
+  padding-right: 0 !important;
+}
+.p0-b {
+  padding-bottom: 0 !important;
+}
+.p0-l {
+  padding-left: 0 !important;
+}
+.p5 {
+  padding: 5px !important;
+}
+.p5-t {
+  padding-top: 5px !important;
+}
+.p5-r {
+  padding-right: 5px !important;
+}
+.p5-b {
+  padding-bottom: 5px !important;
+}
+.p5-l {
+  padding-left: 5px !important;
+}
+.p10 {
+  padding: 10px !important;
+}
+.p10-t {
+  padding-top: 10px !important;
+}
+.p10-r {
+  padding-right: 10px !important;
+}
+.p10-b {
+  padding-bottom: 10px !important;
+}
+.p10-l {
+  padding-left: 10px !important;
+}
+.p15 {
+  padding: 15px !important;
+}
+.p15-t {
+  padding-top: 15px !important;
+}
+.p15-r {
+  padding-right: 15px !important;
+}
+.p15-b {
+  padding-bottom: 15px !important;
+}
+.p15-l {
+  padding-left: 15px !important;
+}
+.p20 {
+  padding: 20px !important;
+}
+.p20-t {
+  padding-top: 20px !important;
+}
+.p20-r {
+  padding-right: 20px !important;
+}
+.p20-b {
+  padding-bottom: 20px !important;
+}
+.p20-l {
+  padding-left: 20px !important;
+}
+.p25 {
+  padding: 25px !important;
+}
+.p25-t {
+  padding-top: 25px !important;
+}
+.p25-r {
+  padding-right: 25px !important;
+}
+.p25-b {
+  padding-bottom: 25px !important;
+}
+.p25-l {
+  padding-left: 25px !important;
+}
+.p30 {
+  padding: 30px !important;
+}
+.p30-t {
+  padding-top: 30px !important;
+}
+.p30-r {
+  padding-right: 30px !important;
+}
+.p30-b {
+  padding-bottom: 30px !important;
+}
+.p30-l {
+  padding-left: 30px !important;
+}
+.p40 {
+  padding: 40px !important;
+}
+.p40-t {
+  padding-top: 40px !important;
+}
+.p40-r {
+  padding-right: 40px !important;
+}
+.p40-b {
+  padding-bottom: 40px !important;
+}
+.p40-l {
+  padding-left: 40px !important;
+}
+.p50 {
+  padding: 50px !important;
+}
+.p50-t {
+  padding-top: 50px !important;
+}
+.p50-r {
+  padding-right: 50px !important;
+}
+.p50-b {
+  padding-bottom: 50px !important;
+}
+.p50-l {
+  padding-left: 50px !important;
+}
+.p60 {
+  padding: 60px !important;
+}
+.p60-t {
+  padding-top: 60px !important;
+}
+.p60-r {
+  padding-right: 60px !important;
+}
+.p60-b {
+  padding-bottom: 60px !important;
+}
+.p60-l {
+  padding-left: 60px !important;
+}
+.p70 {
+  padding: 70px !important;
+}
+.p70-t {
+  padding-top: 70px !important;
+}
+.p70-r {
+  padding-right: 70px !important;
+}
+.p70-b {
+  padding-bottom: 70px !important;
+}
+.p70-l {
+  padding-left: 70px !important;
+}
+.p80 {
+  padding: 80px !important;
+}
+.p80-t {
+  padding-top: 80px !important;
+}
+.p80-r {
+  padding-right: 80px !important;
+}
+.p80-b {
+  padding-bottom: 80px !important;
+}
+.p80-l {
+  padding-left: 80px !important;
+}
+.p90 {
+  padding: 90px !important;
+}
+.p90-t {
+  padding-top: 90px !important;
+}
+.p90-r {
+  padding-right: 90px !important;
+}
+.p90-b {
+  padding-bottom: 90px !important;
+}
+.p90-l {
+  padding-left: 90px !important;
+}
+.p100 {
+  padding: 100px !important;
+}
+.p100-t {
+  padding-top: 100px !important;
+}
+.p100-r {
+  padding-right: 100px !important;
+}
+.p100-b {
+  padding-bottom: 100px !important;
+}
+.p100-l {
+  padding-left: 100px !important;
+}
+/*------------------------------------------------------------
+font-size・・・フォントサイズの設定
+-------------------------------------------------------------*/
+
+.b {
+  font-weight: bold !important;
+} /*太字*/
+.normal {
+  font-weight: normal !important;
+} /*太字を解除*/
+.big {
+  font-size: 1.2em !important;
+}
+.big2 {
+  font-size: 1.5em !important;
+}
+.big3 {
+  font-size: 1.8em !important;
+}
+.small {
+  font-size: 0.8em !important;
+}
+
+/*------------------------------------------------------------
+color・・・フォントカラーの設定
+-------------------------------------------------------------*/
+
+.red {
+  color: #ff0000 !important;
+} /*赤*/
+.blue {
+  color: #0000dd !important;
+} /*青*/
+.green {
+  color: #008000 !important;
+} /*緑*/
+.yellow {
+  color: #ffff00 !important;
+} /*黄*/
+.navy {
+  color: #1f26a9 !important;
+} /*紺*/
+.orange {
+  color: #ff6600 !important;
+} /*橙*/
+.pink {
+  color: #cc6699 !important;
+} /*ピンク*/
+.purple {
+  color: #660099 !important;
+} /*紫*/
+.olive {
+  color: #808000 !important;
+} /*黄土色*/
+.lime {
+  color: #00ff00 !important;
+} /*黄緑*/
+.aqua {
+  color: #167fa6 !important;
+} /*水色*/
+.black {
+  color: #000 !important;
+} /*黒*/
+.gray {
+  color: #ccc !important;
+} /*灰*/
+.white {
+  color: #fff !important;
+} /*白*/
+
+/*------------------------------------------------------------
+下線の設定
+-------------------------------------------------------------*/
+
+.underline {
+  text-decoration: underline !important;
+}
+
+/*------------------------------------------------------------
+マーカーペン
+-------------------------------------------------------------*/
+/* フェード気味のマーカー */
+.marker_1 {
+  background: linear-gradient(transparent 50%, yellow);
+}
+/* くっきりしたマーカー */
+.marker_2 {
+  font-weight: bold;
+  background: linear-gradient(transparent 60%, #fff000 60%);
+}
+
+/*------------------------------------------------------------
+入力フォームをハイライトする
+-------------------------------------------------------------*/
+
+input:focus,
+textarea:focus,
+input.focus,
+textarea.focus {
+  background-color: #ffffe4 !important;
+}
+
+/*------------------------------------------------------------
+画像を簡単に回り込ませる（スマホでは解除ver.）
+-------------------------------------------------------------*/
+
+/*左に画像・右に文章*/
+.left_01,
+.left_02 {
+  float: left;
+  margin: 0.2em 0.4em 0.4em 0;
+}
+
+/*右に画像・左に文章*/
+.right_01,
+.right_02 {
+  float: right;
+  margin: 0.2em 0em 0.4em 0.4em;
+}
+
+/*スマホ対応のときのCSS*/
+@media only screen and (max-width: 768px) {
+  .left_01,
+  .right_01 {
+    float: none;
+    margin: 0 0 0.5em;
+  }
+
+  .imgcenter_01 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .imgcenter_01 img {
+    width: 50%;
+    height: auto;
+  }
+} /*メディアクエリ用ここまでがスマホ対応のときのCSS*/
+
+/*------------------------------------------------------------
+スマホ改行コード(スマホ時のみ改行される)
+-------------------------------------------------------------*/
+
+.sp_br {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .sp_br {
+    display: block;
+  }
+}

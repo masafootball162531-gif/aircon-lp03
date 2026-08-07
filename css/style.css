@@ -1,0 +1,842 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+
+/* CSS Document */
+/*----------------------------------------
+PC用のレイアウト（768px以上で表示）
+----------------------------------------*/
+/*768px以下のとき以下を採用*/
+/*--------------------
+レイアウト共通設定（PC）
+--------------------*/
+
+html {
+  font-size: 62.5%; /*62.5にすることで1emが10pxになる（emの計算が楽になる設定）*/
+
+  scroll-behavior: smooth;
+}
+
+/*body全体の初期スタイル調整*/
+body {
+  font-size: 2rem;
+
+  font-family: "Noto Sans JP", 游ゴシック体, "Yu Gothic", YuGothic,
+    "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo,
+    Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-weight: normal;
+  color: #000000;
+  background-color: #ccc;
+}
+/*リンク文字の設定*/
+a {
+  text-decoration: underline;
+}
+/*リストスタイルのデフォルト解除*/
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*一度訪れたリンクの色を変える*/
+a:link,
+a:visited {
+  color: #39f;
+}
+/*マウスオーバーでリンクの色を変える*/
+a:hover,
+a:actibe {
+  color: #f60;
+}
+/*ブラウザのCSSをリセット(pタグがスマホでずれないように
+)
+*/
+p {
+  margin: 0 !important;
+  padding: 0 !important;
+  /* 文字をシームレスに変更 */
+  font-size: clamp(16px, 2vw + 1rem, 20px);
+  /* 行間をシームレスに変更 */
+
+  line-height: clamp(1.2, calc(1em + 0.5vw), 1.8);
+}
+/*セクションエリアの共通設定(とりあえず入れておきましょう)
+*/
+section {
+  clear: both;
+  overflow: auto;
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+}
+/*--------------------
+見出しタグ設定（PC）※h2などの共通設定
+--------------------*/
+h2 {
+  margin: 0rem 0rem;
+  padding: 0rem;
+  font-size: 2.4rem;
+  font-weight: 900;
+  text-align: center;
+}
+h3 {
+  margin: 0rem 0rem;
+  padding: 0rem;
+  font-size: 2rem;
+  font-weight: bold;
+  /*ボックスサイズを視覚的に見れるようにしているだけ*/
+}
+h4 {
+  margin: 0rem 0rem;
+  padding: 0rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+h5 {
+  margin: 0rem 0rem;
+  padding: 0rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+/*--------------------
+全体レイアウト/背景設定（PC用）
+--------------------*/
+/*全体エリア（全体背景を設定するにはここをいじる）*/
+.main {
+  background-color: #f2f2f2;
+  width: 100%;
+  max-width: 650px;
+  /* コンテンツの最大幅 */
+  margin: 0 auto; /* 中央寄せ */
+}
+/*記事（ボディ）エリア*/
+.article {
+  background-color: #fff;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  /* font-size: 1.6rem;  */
+}
+/*記事（ボディ）エリアの行間*/
+.article p {
+  line-height: 1.6;
+}
+/*カラム全体(ボディ)の幅*/
+.article,
+.top_image_in {
+  max-width: 100%; /*SF型の横幅全体*/
+  margin: 0 auto;
+}
+
+/*--------------------
+上部固定ヘッダー設定
+--------------------*/
+/*上部固定ヘッダー全体の設定*/
+.header {
+  position: sticky; /*ヘッダーを固定する*/
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 5000;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  overflow: auto;
+  width: 100%;
+  max-width: 650px; /* 最大幅を設定 */
+  margin: 0 auto; /* 中央寄せ */
+}
+/*ヘッダー内部をカラム幅にする*/
+.header_inner {
+  max-width: 650px;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 0 1rem 0;
+  background-color: #fff;
+}
+
+.header_nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+}
+.header_right {
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+}
+/*ヘッダーのロゴの設定*/
+.header_logo {
+  display: flex;
+  padding-top: 0.3rem;
+  flex-grow: 1;
+  align-items: center;
+}
+/*ヘッダーの問い合わせボタンの設定*/
+.header_mail {
+  width: 22%;
+  box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+/*ヘッダーの電話ボタンの設定*/
+.header_tel {
+  width: 66%;
+  box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+/*ヘッダー内の画像が常に幅100%になる設定*/
+.header_logo img,
+.header_mail img,
+.header_tel img {
+  width: 100%;
+}
+/*--------------------
+セクションの設定
+--------------------*/
+
+/* 季節 */
+.sec_01 {
+  background-color: #f6fdff;
+  padding: 1rem 1rem 2rem;
+}
+
+/* 事例 */
+.sec_02 {
+  padding: 1.5rem 0rem;
+  background-color: #fff;
+}
+/* 選ばれる理由 */
+.sec_03 {
+  padding: 1.5rem 0rem;
+  background-color: #07499d;
+}
+/* ご予約から作業完了までの流れ */
+
+.sec_04 {
+  padding: 2rem 0rem 1.5rem;
+  background-color: #ffffcc;
+}
+
+/* 対象エリア */
+.sec_05 {
+  padding: 1.5rem 1rem;
+  /* background-color: #e6f9ff; */
+
+  /* ---背景画像を中央上合わせにする--- */
+  /* 画像のパスを指定 */
+  background-image: url(../images/area_bg.jpg);
+  /* 画像の繰り返しを防止 */
+  background-repeat: no-repeat;
+  /* 上部中央に配置 */
+  background-position: top center;
+  /* 画像の原寸サイズを維持 cover contain*/
+  background-size: cover;
+}
+/* よくある質問 */
+.sec_06 {
+  padding: 1.5rem 0rem;
+  background-color: #fff;
+}
+/* お問い合わせフォーム */
+
+#sec_07 {
+  padding: 1.5rem 1.5rem 4.5rem;
+  background-color: #e3f5ff;
+}
+/* CTAボタン */
+.sec_cta {
+  padding: 1.5rem 2rem 0rem;
+  margin-bottom: 1rem;
+}
+/* 会社概要 */
+.law {
+  padding: 1.5rem 1rem;
+}
+
+.tel_btn {
+  animation: none;
+  transform-origin: center;
+}
+
+.heartbeat {
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  14% {
+    transform: scale(1.1);
+  }
+  28% {
+    transform: scale(1);
+  }
+  42% {
+    transform: scale(1.1);
+  }
+  70% {
+    transform: scale(1);
+  }
+}
+
+/* セクションのインナー */
+
+.sec_inner {
+  padding: 0 1rem;
+}
+.scroll_yaji {
+  padding-top: 1rem;
+}
+/*--------------------
+季節コンテンツ
+--------------------*/
+/* セクションタイトル */
+.sec_01_h2 {
+  margin-bottom: 0rem;
+}
+
+/* 困りごと画像 */
+
+.komaru_inner {
+  /* ---背景画像を中央上合わせにする--- */
+  /* 画像のパスを指定 */
+  background-image: url(../images/kisetu_bg.jpg);
+  /* 画像の繰り返しを防止 */
+  background-repeat: no-repeat;
+  /* 上部中央に配置 */
+  background-position: bottom center;
+  /* 画像の原寸サイズを維持 cover contain*/
+  background-size: cover;
+  border-radius: 20px;
+
+  margin-bottom: 1rem;
+}
+.komaru_img {
+  padding: 1rem;
+}
+
+.kaiketu_img {
+  margin-bottom: 3rem;
+}
+
+/* 初めての方でも安心 */
+.ansin_title {
+  padding: 0 2rem;
+  margin-bottom: 1rem;
+
+  /* ---背景画像を中央上合わせにする--- */
+  /* 画像のパスを指定 */
+  background-image: url(../images/ansin_bg.png);
+  /* 画像の繰り返しを防止 */
+  background-repeat: no-repeat;
+  /* 上部中央に配置 */
+  background-position: bottom center;
+  /* 画像の原寸サイズを維持 cover contain*/
+  background-size: contain;
+}
+.ansin_step {
+  /* ---背景画像を中央上合わせにする--- */
+  /* 画像のパスを指定 */
+  background-image: url(../images/bg_main_in.png);
+  /* 画像の繰り返しを防止 */
+  background-repeat: repeat;
+  /* 上部中央に配置 */
+  background-position: top center;
+  /* 画像の原寸サイズを維持 cover contain*/
+  background-size: cont;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 8px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* 安心STEP用小文字 */
+.ansin_step_p {
+  margin-top: 2rem;
+}
+
+.ansin_step p {
+  font-size: 1.3rem;
+  text-align: left;
+  text-align: justify;
+  text-indent: -1rem;
+}
+
+/*--------------------
+事例
+--------------------*/
+
+/* セクションタイトル */
+.sec_02_h2 {
+  margin-bottom: 2rem;
+}
+
+.jirei_sub_title {
+  display: none;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.jirei_sub_title p {
+  font-weight: 900;
+  font-size: 3rem;
+  color: #0272bf;
+}
+
+/* 事例ボックス設定 */
+
+.jirei_box {
+}
+.jirei_box_inner {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+}
+.jirei_img1 {
+  background-color: #000;
+  margin-bottom: 2rem;
+}
+.jirei_box_inner h4 {
+  border-left: solid 8px #07499d;
+  border-bottom: dotted 2px #07499d;
+  padding-left: 3px;
+
+  width: 100%;
+  font-size: 2.2rem;
+  margin-bottom: 0.5em;
+  padding: 0.5rem;
+}
+.trable_title {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  /* border-bottom: dotted 3px #000; */
+}
+/* 声用フレックスボックス */
+
+.koe_box {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: flex-end;
+  margin-bottom: 1.5rem;
+}
+
+.koe_title {
+  width: 60%;
+}
+
+.fas {
+  display: inline-block;
+  margin-right: 0.3rem;
+}
+.koe_img {
+  width: 35%;
+  padding: 0rem;
+  margin-right: 1rem;
+}
+.koe_title h5 {
+  border-bottom: solid 1px #ccc;
+  font-size: 2rem;
+  margin-bottom: 0.5em;
+  padding: 0.5rem;
+}
+.koe_title p {
+  text-align: justify;
+}
+
+/*--------------------
+エアコンダッシュが選ばれる理由
+--------------------*/
+
+.sec_03_h2 {
+  padding: 0 0.5rem;
+  margin-bottom: 4rem;
+}
+
+.riyuu_area {
+  padding: 0 1rem;
+}
+
+.riyu_box {
+  padding: 3rem 3rem 3rem;
+  border: solid 3px #222;
+  border-radius: 10px;
+  background-color: #fff;
+  position: relative;
+  margin-bottom: 3rem;
+}
+/* 理由アイコン用 */
+.reason img {
+  position: absolute;
+  width: 30%;
+  height: auto;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.riyu_sub_title {
+  margin-bottom: 2rem;
+}
+
+.riyu_img {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.1);
+}
+.riyu_p p {
+  text-align: justify;
+}
+
+/*--------------------
+ご予約から作業完了までの流れ
+--------------------*/
+
+.sec_04_h2 {
+  margin-bottom: 2rem;
+}
+
+/* STEPカードボックス */
+
+.step_inner {
+  padding: 1.5rem 1rem;
+}
+.step_box {
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  gap: 10px;
+}
+/* STEP左側 */
+.step_box_left {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 30%;
+  height: auto;
+  border: solid 2px #e7e7e7;
+  border-radius: 5px;
+  /* box-shadow: 0 8px 8px 2px rgba(0, 0, 0, 0.1); */
+}
+.step_box_left img {
+  display: block;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* STEP右側 */
+.step_box_right {
+  width: 100%;
+}
+.step_box_right h3 {
+  margin-bottom: 1rem;
+  border-bottom: dotted 2px #ccc;
+  padding: 0rem 0.5rem 0.5rem;
+}
+
+/* STEPアイコン */
+.step_img {
+  width: 30%;
+  margin-bottom: 1rem;
+}
+/* STEP文言 */
+.step_p {
+  text-align: justify;
+}
+
+.step_yaji {
+  margin-bottom: 2rem;
+}
+
+/*--------------------
+対象エリア
+--------------------*/
+
+.area_title_h2 {
+  /* font-size: 4.2rem; */
+  margin-bottom: 0rem;
+  color: #07499d;
+  font-size: clamp(30px, 4vw + 1rem, 42px);
+}
+
+.area_title_line {
+  margin-bottom: 2rem;
+}
+
+.area_map {
+  background-color: #fff;
+  padding: 1rem 1rem;
+  border-radius: 20px;
+  border: solid 3px #ccc;
+  margin-bottom: 3rem;
+}
+
+.area_bottom_img {
+  margin-bottom: 1rem;
+}
+
+.map_p {
+  font-size: 1.3rem;
+}
+
+/*--------------------
+よくある質問
+--------------------*/
+/* タイトル */
+.sec_06_h2 {
+  background: linear-gradient(
+    to bottom,
+    #053e87 0%,
+    #053e87 50%,
+    #07499d 50%,
+    #07499d 100%
+  );
+
+  padding: 2rem;
+  color: #fff;
+  font-size: clamp(26px, 4vw + 1rem, 35px);
+  margin-bottom: 3rem;
+}
+/* 質問ボックス */
+.qa_box {
+  padding: 2rem 1rem;
+}
+.qa_box p {
+  text-align: left;
+}
+
+.q_box img,
+.a_box img {
+  width: 35px;
+  height: auto;
+}
+
+.q_box {
+  background-color: #07499d;
+
+  display: flex;
+  padding: 0.5rem;
+  color: #fff;
+}
+.q_icon_box {
+  display: flex;
+  align-items: center;
+  width: 10%;
+  padding: 0.5rem;
+}
+.q_p {
+  padding: 2rem 1.5rem;
+}
+/* 回答ボックス */
+
+.a_box {
+  background-color: #f1f3ff;
+
+  display: flex;
+  padding: 0.5rem;
+  color: #07499d;
+  margin-bottom: 2rem;
+}
+
+.a_icon_box {
+  display: flex;
+  align-items: center;
+  width: 10%;
+  padding: 0.5rem;
+}
+
+.a_p {
+  padding: 2rem 1.5rem;
+}
+
+/*--------------------
+フォーム
+--------------------*/
+
+#sec_07 h2 {
+  margin-bottom: 1.5rem;
+  margin-top: 2rem;
+  background-color: #e3f5ff;
+  color: #07499d;
+  font-size: 2.5rem;
+}
+
+.form {
+}
+
+/*--------------------
+サンクスページ
+--------------------*/
+.thanks {
+  padding: 3rem;
+}
+
+.thanks h2 {
+  margin-bottom: 3rem;
+}
+
+.thanks a {
+  display: flex;
+  display: inline-block;
+  justify-content: center;
+}
+.re {
+  text-align: center;
+}
+
+.bottom_space {
+  margin-bottom: 2rem;
+}
+
+/*--------------------
+チェックリストの設定
+--------------------*/
+ul.check_list {
+  border: 1px solid #ccc;
+  list-style: none; /*リストの「・」を隠す*/
+  padding: 1rem 1rem 0.3rem 1rem;
+}
+ul.check_list li {
+  background-image: url("../images/icon-check03-red.png"); /*チェックボックス画像挿入*/
+  background-repeat: no-repeat; /*画像を繰り返し表示しない設定*/
+  background-size: 3.5%; /*画像を小さくする*/
+  padding-left: 1.8rem; /*左側に空白を入れて文字を右にずらす*/
+  margin-bottom: 0.8rem; /*各行の下側に余白を入れる*/
+}
+
+/*--------------------------------------------------
+  スマホ用下部固定ボタン（PCは非表示）
+  -----------------------------------------------------*/
+.bottom_btn_area {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  z-index: 1000;
+  display: none; /* 最初は非表示にする */
+}
+.bottom_btn_box {
+  max-width: 650px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 5px;
+  padding: 1rem;
+}
+
+.bottom_tell {
+}
+
+.bottom_mail {
+}
+.c-button._shiny {
+  display: block;
+  position: relative;
+  /* padding: 1em 1.5em; */
+  /* background-color: #1981f7; */
+  /* box-shadow: 0 3px 0 0 #0867d4; */
+  border-radius: 4px;
+  /* margin: 30px auto; */
+  font-weight: bold;
+  /* max-width: 500px; */
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  overflow: hidden;
+  transition: 300ms;
+}
+.c-button._shiny::before {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  top: -180px;
+  left: 0;
+  width: 30px;
+  height: 100%;
+  background-color: #ffffff;
+  transition: 300ms;
+  animation: shinyshiny 2.5s ease-in-out infinite;
+}
+
+.c-button._shiny:hover {
+  text-decoration: none;
+  color: #fff;
+  box-shadow: none;
+  -webkit-transform: translateY(3px);
+}
+
+@-webkit-keyframes shinyshiny {
+  0% {
+    -webkit-transform: scale(0) rotate(45deg);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: scale(0) rotate(45deg);
+    opacity: 0.5;
+  }
+  81% {
+    -webkit-transform: scale(4) rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(50) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+/*--------------------
+会社概要
+--------------------*/
+
+.law_container {
+  margin: 1rem auto;
+}
+
+.law_h2 {
+  font-size: 3rem;
+}
+.table-block {
+  border: 1px solid #ccc;
+  margin: 0 auto;
+}
+
+.table-block th {
+  border: 1px solid #ccc;
+  background-color: #f3f7fb;
+  padding: 0.5rem;
+}
+
+.table-block td {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+}
+
+.logo_law img {
+  display: inline-block;
+  margin-bottom: 0.8rem;
+}
+
+/*--------------------
+フッター部分
+--------------------*/
+.footer {
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+  background-color: #105599;
+  padding: 2rem 0rem 18rem;
+  text-align: center;
+  font-size: 1.4rem;
+  color: #ffffff;
+}
+.footer a {
+  color: #fff;
+}
+
+/*--------------------------------------------------
+下部固定ヘッダー（PCは非表示）
+-----------------------------------------------------*/
+/* ↓メディアスクリーン用 */
