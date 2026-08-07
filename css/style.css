@@ -151,7 +151,7 @@ h5 {
   opacity: 1;
   pointer-events: none;
   --hero-woman-x: 6%;
-  --hero-woman-y: -62px;
+  --hero-woman-y: clamp(-62px, -9.5vw, -34px);
   --hero-woman-scale: 0.9;
   transform-origin: 52% 32%;
   animation: heroWomanSway 2.8s ease-in-out infinite;
@@ -170,6 +170,14 @@ h5 {
 
   70% {
     transform: translate3d(calc(var(--hero-woman-x) + 2.1%), var(--hero-woman-y), 0) scale(var(--hero-woman-scale)) rotate(0.28deg);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero_woman {
+    --hero-woman-x: 8%;
+    --hero-woman-y: -28px;
+    --hero-woman-scale: 0.84;
   }
 }
 
