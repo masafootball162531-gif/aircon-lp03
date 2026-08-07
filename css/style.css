@@ -176,7 +176,7 @@ h5 {
 @media (max-width: 480px) {
   .hero_woman {
     --hero-woman-x: 8%;
-    --hero-woman-y: -28px;
+    --hero-woman-y: -42px;
     --hero-woman-scale: 0.84;
   }
 }
