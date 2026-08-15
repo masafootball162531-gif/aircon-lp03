@@ -895,6 +895,86 @@ ul.check_list li {
   color: #fff;
 }
 
+/*--------------------
+離脱防止POP
+--------------------*/
+.exit-popup[hidden] {
+  display: none;
+}
+
+.exit-popup {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  padding: 18px 12px calc(18px + env(safe-area-inset-bottom));
+  overflow-y: auto;
+}
+
+.exit-popup-backdrop {
+  position: fixed;
+  inset: 0;
+  padding: 0;
+  background: rgba(0, 20, 70, 0.72);
+  border: 0;
+  cursor: pointer;
+}
+
+.exit-popup-card {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 430px);
+  overflow: hidden;
+  background: #005af5;
+  border-radius: 8px;
+  box-shadow: 0 22px 52px rgba(0, 20, 70, 0.36);
+}
+
+.exit-popup-close {
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  z-index: 2;
+  display: grid;
+  width: 8.5%;
+  height: 8.5%;
+  place-items: center;
+  padding: 0;
+  color: transparent;
+  background: transparent;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.exit-popup-close:focus,
+.exit-popup-close:focus-visible {
+  outline: 0;
+}
+
+.exit-popup-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #005af5;
+}
+
+.exit-popup-tel-hotspot {
+  position: absolute;
+  left: 3.4%;
+  right: 3.4%;
+  bottom: 5.2%;
+  z-index: 1;
+  height: 14.2%;
+  border-radius: 999px;
+  outline-offset: 3px;
+}
+
+body.is-exit-popup-open {
+  overflow: hidden;
+}
+
 /*--------------------------------------------------
 下部固定ヘッダー（PCは非表示）
 -----------------------------------------------------*/

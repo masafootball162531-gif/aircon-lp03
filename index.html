@@ -42,7 +42,7 @@
     <link href="css/sanitize.css" rel="stylesheet" />
 
     <!--スタイルの読み込みPC用-->
-    <link href="css/style.css?v=20260807-mobile03" rel="stylesheet" />
+    <link href="css/style.css?v=20260815-exit01" rel="stylesheet" />
 
     <!--スタイルの読み込みスマホ用-->
     <link href="css/rwd.css" rel="stylesheet" />
@@ -56,7 +56,9 @@
 
     <!--JavaScriptのコードを設置-->
 
-    <script src="js/script.js"></script>
+    <link rel="preload" as="image" href="images/exit-popup-browser-back.webp?v=20260815" />
+
+    <script src="js/script.js?v=20260815-exit01"></script>
 
     <!--↑上記設定（都度変わるタイトルなどの部分を除いて）は基本的に今後いじることはない-->
 
@@ -724,6 +726,15 @@
       <p class="small">Copyright(c)エアコンDASH All Rights Reseved.</p>
     </footer>
     <!----------------------------------------▼▼▼フッターここまで▼▼▼-->
+
+    <div class="exit-popup" id="exitPopup" role="dialog" aria-modal="true" aria-label="離脱防止POP" hidden>
+      <button class="exit-popup-backdrop" type="button" data-exit-popup-close aria-label="離脱防止POPを閉じる"></button>
+      <div class="exit-popup-card">
+        <button class="exit-popup-close" type="button" data-exit-popup-close aria-label="離脱防止POPを閉じる"></button>
+        <img class="exit-popup-image" src="images/exit-popup-browser-back.webp?v=20260815" alt="買い替える前に、そのエアコン、まだ直せるかもしれません。症状を伝えるだけで修理できるか無料で確認。冷えない、水漏れ、異音・異臭。修理を頼むかは費用を聞いてからでOK。電話で無料相談する。">
+        <a class="exit-popup-tel-hotspot" href="tel:05055272515" aria-label="電話で無料相談する"></a>
+      </div>
+    </div>
   
 </body>
 </html><script src="https://ssl.form-mailer.jp/formfiles/js/embed.js"></script>

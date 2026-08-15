@@ -95,6 +95,67 @@ $(function () {
   });
 });
 
+// ブラウザバック時の離脱防止POP
+document.addEventListener("DOMContentLoaded", function () {
+  const exitPopup = document.querySelector("#exitPopup");
+  if (!exitPopup) return;
+
+  const closeButtons = document.querySelectorAll("[data-exit-popup-close]");
+  let exitPopupArmed = false;
+  let backPopupShown = false;
+  let allowExitNavigation = false;
+
+  window.setTimeout(function () {
+    exitPopupArmed = true;
+  }, 1200);
+
+  const openExitPopup = function () {
+    if (!exitPopupArmed) return;
+    exitPopup.hidden = false;
+    document.body.classList.add("is-exit-popup-open");
+    exitPopup.querySelector(".exit-popup-close")?.focus();
+  };
+
+  const closeExitPopup = function () {
+    exitPopup.hidden = true;
+    document.body.classList.remove("is-exit-popup-open");
+  };
+
+  closeButtons.forEach(function (button) {
+    button.addEventListener("click", closeExitPopup);
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && !exitPopup.hidden) {
+      closeExitPopup();
+    }
+  });
+
+  try {
+    window.history.replaceState(
+      { ...window.history.state, airconDashExitBase: true },
+      ""
+    );
+    window.history.pushState({ airconDashExitPopupGuard: true }, "");
+
+    window.addEventListener("popstate", function () {
+      if (allowExitNavigation) return;
+
+      if (backPopupShown) {
+        allowExitNavigation = true;
+        window.history.back();
+        return;
+      }
+
+      backPopupShown = true;
+      openExitPopup();
+      window.history.pushState({ airconDashExitPopupGuard: true }, "");
+    });
+  } catch (error) {
+    // 一部ブラウザでは履歴操作が制限されるため、その場合は通常遷移に任せます。
+  }
+});
+
 // 下まで行ったら自動で１００PX戻る
 
 $(function () {
